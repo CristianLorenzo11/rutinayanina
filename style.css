@@ -1,0 +1,402 @@
+/* Estilos base */
+body {
+    font-family: 'Playfair Display', serif; /* Cambiar la tipografía a Playfair Display */
+    background: linear-gradient(45deg, #202020, #000); /* Degradado oscuro */
+    background-attachment: fixed; /* Evitar repetición del degradado */
+    background-size: cover; /* Cubrir todo el viewport */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos para el encabezado */
+.header {
+    background: linear-gradient(45deg, #202020, #000); /* Degradado oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Sombra sutil */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header p {
+    font-size: 16px;
+    opacity: 0.8; /* Opacidad reducida para el texto secundario */
+    margin-top: 5px;
+}
+
+#info-personal {
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); /* Sombra casi blanca */
+    text-align: center;
+    color: #fff; /* Texto blanco */
+}
+
+#info-personal h2 {
+    font-size: 32px;
+    color: #fff; /* Texto blanco */
+    margin-bottom: 20px;
+    margin-top: 0px;
+    padding-top: 10px;
+}
+#overlay, #alertaentreejercicio {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    z-index: 9999; /* Z-index alto para que esté por encima de todo */
+    color: rgb(255, 255, 255); /* Color de texto blanco */
+    font-size: 24px;
+    text-align: center;
+    padding-top: 200px; /* Ajusta el espacio desde arriba */
+}
+#login-container {
+    text-align: center;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  }
+
+  .logo-container {
+    display: inline-block;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }
+
+  .logo   {
+    max-width: 70%; /* Asegura que el logo no sea más ancho que el contenedor */
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de aspecto */
+    filter: drop-shadow(0px 0px 5px rgb(245, 245, 247)); /* Ajusta el valor de desenfoque según sea necesario */
+
+    border-radius: 50%;
+  }
+  .logo1   {
+    max-width: 60%; /* Asegura que el logo no sea más ancho que el contenedor */
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de aspecto */
+    filter: drop-shadow(0px 0px 5px rgba(245, 245, 247, 0.212)); /* Ajusta el valor de desenfoque según sea necesario */
+
+    border-radius: 50%;
+  }
+#overlay, #alertaentreejercicio p {
+    font-size: 25px;
+    
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del overlay */
+}
+
+
+.detalle-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    margin-bottom: 5px;
+    border-bottom:solid 1px #ccc;
+}
+.completado {
+    background-color: #407ea7; 
+}
+  /* Estilo para el cuadro de marcado */
+  .marcado-ejercicio input[type="checkbox"] {
+    width: 20px; /* Ancho del cuadro de marcado */
+    height: 20px; /* Altura del cuadro de marcado */
+
+}
+
+
+.info-titulo {
+    flex: 1; /* Ajusta el tamaño del elemento */
+    font-weight: bold;
+    color: white; /* Texto gris */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: auto; /* Aumenta el margen izquierdo */
+    margin-right: auto; /* Aumenta el margen derecho */
+}
+
+.info-dato {
+    flex: 1; /* Ajusta el tamaño del elemento */
+    color: #fff; /* Texto blanco */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-right: auto; /* Aumenta el margen derecho */
+}
+
+
+.info-dato, .info-titulo {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+.tabla-rutina {
+    display: none;
+}
+
+.recomendacion {
+    display: none;
+}
+
+.tabla-rutina.active,
+.recomendacion.active {
+    display: block;
+}
+
+.tabla-rutina.active,
+.recomendacion.active {
+    display: block;
+}
+
+.info-personal {
+    display: none;
+}
+
+.info-personal.active {
+    display: block;
+}
+
+/* Imágenes al lado de los ejercicios */
+.tabla-rutina img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+#login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #202020, #000); /* Degradado oscuro */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Efecto de brillo */
+}
+
+#login-container h1,
+#login-container h4 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Texto blanco */
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff; /* Texto blanco */
+}
+
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto 20px auto; /* Centrado horizontalmente */
+    border: 1px solid #fff; /* Borde blanco */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco con opacidad */
+    color: #fff; /* Texto blanco */
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0ff; /* Azul claro */
+    color: #000; /* Texto negro */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+#login-form button:hover {
+    background-color: #00e; /* Azul más oscuro */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efecto de brillo en el hover */
+}
+
+#login-form button:focus {
+    outline: none;
+}
+
+.tabla-rutina {
+    
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 4px;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); /* Sombra casi blanca */
+
+
+}
+
+.tabla-rutina h2 {
+padding-top: 10px;
+    font-size: 24px;
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ejercicio {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc; /* Gris claro */
+    padding: 20px 0;
+}
+
+.detalle-ejercicio {
+    flex: 1;
+}
+
+.detalle-ejercicio h3 {
+    font-size: 18px;
+    color: #fff; /* Texto blanco */
+    margin-bottom: 5px;
+}
+
+.detalle-ejercicio p {
+    font-size: 16px;
+    color: #ccc; /* Gris medio */
+    margin: 5px 0;
+}
+
+.imagen-ejercicio {
+    flex: 1;
+    text-align: center;
+}
+
+.imagen-ejercicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.botones-dias {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente los botones */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan a una nueva línea si no caben en una sola línea */
+}
+
+.botones-dias button {
+    font-family: 'Playfair Display', serif; /* Cambiar la tipografía a Playfair Display */
+    padding: 8px 16px; /* Ajustar el padding */
+    background-color: transparent; /* Quitar el color de fondo */
+    color:white; /* Color del texto */
+    border: 1px solid white; /* Agregar un borde claro */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Agregar transiciones */
+    margin: 5px; /* Agregar espacio entre los botones */
+    min-width: 120px; /* Ancho mínimo para los botones */
+    max-width: 200px; /* Ancho máximo para los botones */
+}
+
+.botones-dias button:hover {
+    background-color: #00e; /* Cambiar el color de fondo al pasar el mouse */
+    color: #fff; /* Cambiar el color del texto al pasar el mouse */
+    border-color: #00e; /* Cambiar el color del borde al pasar el mouse */
+}
+
+.botones-dias button:not(:last-child) {
+    margin-bottom: 5px; /* Reducir el margen inferior */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color:#0ff ;
+    margin: 5px auto;
+    transition: background-color 0.3s ease;
+}
+
+
+.botones-dias button {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+
+    }
+
+    .botones-dias {
+        display: none;
+        flex-direction: column;
+        align-items: center; /* Centrar los botones horizontalmente */
+    }
+
+    .botones-dias.active {
+        display: flex;
+    }
+
+    .botones-dias button {
+        padding-top: 10px;
+        margin-right: 0;
+        margin-bottom: 5px; /* Reducir el margen inferior en pantalla pequeña */
+        width: 60%; /* Establecer un ancho máximo para los botones */
+        color: #0ff;
+    }
+}
+
+#temporizador {
+    text-align: center;
+    color: #0ff; /* Azul claro */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #202020, #000); /* Degradado oscuro */
+    border: 1px solid #0ff; /* Borde azul claro */
+    overflow: hidden;
+}
+
+#temporizador h2 {
+    color: #0ff; /* Azul claro */
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+#tiempo-restante {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#temporizador button {
+    background-color: #0ff; /* Azul claro */
+    color: #000; /* Texto negro */
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#temporizador button:hover {
+    background-color: #00e; /* Azul más oscuro */
+}
+.Recomendaciones .info-titulo {
+    color: white;
+}

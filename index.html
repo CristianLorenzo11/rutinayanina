@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutina de Entrenamiento</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container">
+        <div class="logo-container">
+          <img src="CRISTIAN LORENZO (1).png" alt="Logo de Cristian Lorenzo" class="logo">
+        </div>
+        
+        <p></p>
+        <h4>Mi rutina Personalizada</h4>
+        <form id="login-form">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Iniciar sesión</button>
+        </form>
+      </div>
+      <div id="overlay"></div>
+      
+    
+      <div id="content" class="hidden">
+    <div class="header">
+        <img src="CRISTIAN LORENZO (1).png" alt="Logo de Cristian Lorenzo" class="logo1">
+        <h1>Rutina de Entrenamiento</h1>
+        <h2> Yanina Weyreuter </h2> 
+      </div>
+      <div class="container">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="botones-dias" id="botones-dias">
+            <button onclick="mostrarTabla('activacion')">Activación</button>
+            <button onclick="mostrarTabla('lunes')">Día 1</button>
+            <button onclick="mostrarTabla('martes')">Día 2</button>
+            <button onclick="mostrarTabla('miercoles')">Día 3</button>
+            <button onclick="mostrarTabla('jueves')">Día 4</button>
+            <button onclick="mostrarTabla('viernes')">Día 5</button>
+            <button onclick="mostrarTabla('informacion')">Mi Información</button>
+            <button onclick="mostrarTabla('recomendacion')">Recomendaciones</button>
+
+
+        </div>
+    </div>
+    
+    
+    <div id="tabla-lunes" class="tabla-rutina">
+        <h2>Día 1</h2>
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Sentadillas</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 12-15</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="sentadilla sin peso mujer.gif" alt="Sentadillas">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio1" onchange="marcarEjercicio('ejercicio1')">
+                <label for="ejercicio1"></label>
+            </div>
+        </div>
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Prensa</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 12-15</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="prensa 2.gif" alt="prensa">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio2" onchange="marcarEjercicio('ejercicio2')">
+                <label for="ejercicio2"></label>
+            </div>
+        </div>
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Sillon de cuadricpes</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 8-10</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="cuadricpes.gif" alt="cuadricpes">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio3" onchange="marcarEjercicio('ejercicio3')">
+                <label for="ejercicio3"></label>
+            </div>
+        </div>
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Sillon de aductores</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 10-12</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="aductores.gif" alt="LATERALES">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio4" onchange="marcarEjercicio('ejercicio4')">
+                <label for="ejercicio4"></label>
+            </div>
+        </div>
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Sentadilla sumo</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 10-12</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="sumo.jpg" alt="sumo">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio5" onchange="marcarEjercicio('ejercicio5')">
+                <label for="ejercicio5"></label>
+            </div>
+        </div>
+         <!-- 
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Vuelos laterales</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 10-12</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="vuelo lateral parado.gif" alt="Vuelos laterales">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio6" onchange="marcarEjercicio('ejercicio6')">
+                <label for="ejercicio6"></label>
+            </div>
+        </div>  
+    -->
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Puente de gluteos</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 12-15</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="puente.gif" alt="Puente de gluteos">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio7" onchange="marcarEjercicio('ejercicio7')">
+                <label for="ejercicio7"></label>
+            </div>
+        </div>
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Desplantes atras cruzados</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 12-15</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="paso atras cruzado.gif" alt="paso atras">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio8" onchange="marcarEjercicio('ejercicio8')">
+                <label for="ejercicio8"></label>
+            </div>
+        </div>
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Gemelos</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 12-15</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="PANTORRILLAS.gif" alt="Gemelos">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio9" onchange="marcarEjercicio('ejercicio9')">
+                <label for="ejercicio9"></label>
+            </div>
+        </div>
+
+        <div class="ejercicio">
+            <div class="detalle-ejercicio">
+                <h3>Estocada</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 12-15</p>
+            </div>
+            <div class="imagen-ejercicio">
+                <img src="estocada.gif" alt="Estocada">
+            </div>
+            <div class="marcado-ejercicio">
+                <input type="checkbox" id="ejercicio10" onchange="marcarEjercicio('ejercicio10')">
+                <label for="ejercicio10"></label>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabla-martes" class="tabla-rutina">
+        <h2>Día 2</h2>
+        <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Rodilla arriba contra la pared</h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 15-20 por piernas</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="rodilla arriba contra la pared.gif" alt="Aperturas">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio17" onchange="marcarEjercicio('ejercicio17')">
+              <label for="ejercicio17"></label>
+          </div>
+      </div>
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Flexiones de brazos en suelo con rodillas apoyadas</h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 10-12</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="flexiones con rodilla.gif" alt="Flexiones de brazos">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio18" onchange="marcarEjercicio('ejercicio18')">
+              <label for="ejercicio18"></label>
+          </div>
+      </div>
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>planchas frontales</h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 30 segundos</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="planchas frontales.jpg" alt="curl de biceps">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio19" onchange="marcarEjercicio('ejercicio19')">
+              <label for="ejercicio19"></label>
+          </div>
+      </div>
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Escaladores</h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 15-20</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="escaladores.gif" alt="frontales">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio20" onchange="marcarEjercicio('ejercicio20')">
+              <label for="ejercicio20"></label>
+          </div>
+      </div>
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Jumping jacks</h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 10-12</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="jumpin.gif" alt="Posteriores">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio21" onchange="marcarEjercicio('ejercicio21')">
+              <label for="ejercicio21"></label>
+          </div>
+      </div>
+      
+  <!-- 
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Biceps Concentrado</h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 10-12</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="biceps concentrado.gif" alt="martillo">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio25" onchange="marcarEjercicio('ejercicio25')">
+              <label for="ejercicio25"></label>
+          </div>
+      </div> 
+      
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Apertura Inclinado con mancuernas </h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 10-12</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="apertura inclinado.gif" alt="apertura">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio34" onchange="marcarEjercicio('ejercicio34')">
+              <label for="ejercicio34"></label>
+          </div>
+      </div>
+  -->
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>plancha lateral</h3>
+              <p>Series: 4</p>
+              <p>Repeticiones: 10-12</p>
+          </div>
+          <div class="imagen-ejercicio">
+              <img src="plancha lateral.png" alt="Vuelo">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio35" onchange="marcarEjercicio('ejercicio35')">
+              <label for="ejercicio35"></label>
+          </div>
+      </div>
+  
+  
+    </div>
+  
+    
+  <div id="tabla-miercoles" class="tabla-rutina">
+    <h2>Día 3</h2>
+    <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Aperturas con mancuerna en Banco plano</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 8-10</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="APERTURA EN PLANO CON M.gif" alt="Aperturas">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio17" onchange="marcarEjercicio('ejercicio17')">
+          <label for="ejercicio17"></label>
+      </div>
+  </div>
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Flexiones de brazos en suelo con rodillas apoyadas</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="flexiones con rodilla.gif" alt="Flexiones de brazos">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio18" onchange="marcarEjercicio('ejercicio18')">
+          <label for="ejercicio18"></label>
+      </div>
+  </div>
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Curl de biceps con barra</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="curl de biceps con barra ez.gif" alt="curl de biceps">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio19" onchange="marcarEjercicio('ejercicio19')">
+          <label for="ejercicio19"></label>
+      </div>
+  </div>
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>vuelo frontal con Disco</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="frontal con disco.gif" alt="frontales">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio20" onchange="marcarEjercicio('ejercicio20')">
+          <label for="ejercicio20"></label>
+      </div>
+  </div>
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Posteriores en polea con Soga</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="POSTERIORES EN POLEA MUJER.gif" alt="Posteriores">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio21" onchange="marcarEjercicio('ejercicio21')">
+          <label for="ejercicio21"></label>
+      </div>
+  </div>
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Dorsales en polea</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="jalon al pecho, dorsalera.gif" alt="dorsalera">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio22" onchange="marcarEjercicio('ejercicio22')">
+          <label for="ejercicio22"></label>
+      </div>
+  </div>
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Remo bajo</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="REMO BAJO G.gif" alt="Remo">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio23" onchange="marcarEjercicio('ejercicio23')">
+          <label for="ejercicio23"></label>
+      </div>
+  </div>
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Vuelos laterales</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="vuelo lateral parado.gif" alt="lateral">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio24" onchange="marcarEjercicio('ejercicio24')">
+          <label for="ejercicio24"></label>
+      </div>
+  </div>
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Martillo con mancuerna</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="martillo con mancuenras.gif" alt="martillo">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio25" onchange="marcarEjercicio('ejercicio25')">
+          <label for="ejercicio25"></label>
+      </div>
+  </div>
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Apertura Inclinado con mancuernas </h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="apertura inclinado.gif" alt="apertura">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio34" onchange="marcarEjercicio('ejercicio34')">
+          <label for="ejercicio34"></label>
+      </div>
+  </div>
+
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Triceps en polea con Soga </h3>
+          <p>Series: 4</p>
+          <p>Repeticiones: 10-12</p>
+      </div>
+      <div class="imagen-ejercicio">
+          <img src="triceps en polea con soga.gif" alt="apertura">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio35" onchange="marcarEjercicio('ejercicio35')">
+          <label for="ejercicio35"></label>
+      </div>
+  </div>
+
+
+</div>
+
+
+<div id="tabla-jueves" class="tabla-rutina">
+    <h2>Día 4</h2>
+    
+    <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Puente a una pierna</h3>
+            <p>Series: 4</p>
+            <p>Repeticiones:  12</p>
+            <p>Descanso : 30 - 45 segundos</p>
+        </div>
+      <div class="imagen-ejercicio">
+          <img src="puente a una pierna.gif" alt="flexiones con rodilla">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio46" onchange="marcarEjercicio('ejercicio46')">
+          <label for="ejercicio46"></label>
+      </div>
+  </div>
+  
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Jumping jacks</h3>
+            <p>Series: 4 </p>
+            <p>Repeticiones: 30</p>
+            <p>Descanso : 30 - 45 segundos</p>
+        </div>
+      <div class="imagen-ejercicio">
+          <img src="jumpin.gif" alt="remo">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio47" onchange="marcarEjercicio('ejercicio47')">
+          <label for="ejercicio47"></label>
+      </div>
+  </div>
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>abdominales cortos</h3>
+            <p>Series: 4 </p>
+            <p>Repeticiones: 15-30 </p>
+            <p>Descanso : 30 - 45 segundos</p>
+        </div>
+      <div class="imagen-ejercicio">
+          <img src="cortos.gif" alt="pullover">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio48" onchange="marcarEjercicio('ejercicio48')">
+          <label for="ejercicio48"></label>
+      </div>
+  </div>
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Postura</h3>
+            <p>Series: 4 </p>
+            <p>Repeticiones: 45 segundos </p>
+            <p>Descanso : 30 - 45 segundos</p>
+        </div>
+      <div class="imagen-ejercicio">
+          <img src="POSTURA MUJER.jpg" alt="serrucho">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio49" onchange="marcarEjercicio('ejercicio49')">
+          <label for="ejercicio49"></label>
+      </div>
+  </div>
+  
+  
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>abdominales con giro ruso</h3>
+            <p>Series: 4 </p>
+            <p>Repeticiones: 12-15 </p>
+            <p>Descanso : 30 - 45 segundos</p>
+        </div>
+      <div class="imagen-ejercicio">
+          <img src="abdominales con giro.gif" alt="Superman">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio50" onchange="marcarEjercicio('ejercicio50')">
+          <label for="ejercicio50"></label>
+      </div>
+  </div>
+  <div class="ejercicio">
+      <div class="detalle-ejercicio">
+          <h3>Fondo de triceps</h3>
+            <p>Series: 4 </p>
+            <p>Repeticiones:12</p>
+            <p>Descanso : 30 - 45 segundos</p>
+        </div>
+      <div class="imagen-ejercicio">
+          <img src="fondo de triceps en banco.gif" alt="Superman">
+      </div>
+      <div class="marcado-ejercicio">
+          <input type="checkbox" id="ejercicio53" onchange="marcarEjercicio('ejercicio53')">
+          <label for="ejercicio53"></label>
+      </div>
+  </div>
+      </div>
+
+
+<div id="tabla-viernes" class="tabla-rutina">
+        <h2>Día 5</h2>
+        <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Sentadillas</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones:  12-15</p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="SENTADILLAS HOMBRE.gif" alt="Sentadillas">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio54" onchange="marcarEjercicio('ejercicio54')">
+              <label for="ejercicio54"></label>
+          </div>
+      </div>
+      
+      
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Peso Muerto</h3>
+                <p>Series: 4</p>
+                <p>Repeticiones: 12-15</p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="PESO MUERTO MUJER.gif" alt="peso Muerto">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio55" onchange="marcarEjercicio('ejercicio55')">
+              <label for="ejercicio55"></label>
+          </div>
+      </div>
+      
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Puente de gluteos</h3>
+                <p>Series: 4 </p>
+                <p>Repeticiones: 12-15 </p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="puente con barra.gif" alt="Plancha">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio56" onchange="marcarEjercicio('ejercicio56')">
+              <label for="ejercicio39"></label>
+          </div>
+      </div>
+      
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Femorales en maquina </h3>
+                <p>Series: 4 </p>
+                <p>Repeticiones: 12-15 </p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="femorales 2piernas.gif" alt="Plancha">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio57" onchange="marcarEjercicio('ejercicio57')">
+              <label for="ejercicio57"></label>
+          </div>
+      </div>
+      
+      
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Zumo</h3>
+                <p>Series: 4 </p>
+                <p>Repeticiones: 12-15 </p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="sumo.jpg" alt="Superman">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio58" onchange="marcarEjercicio('ejercicio58')">
+              <label for="ejercicio58"></label>
+          </div>
+      </div>
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Gemelos</h3>
+                <p>Series: 4 </p>
+                <p>Repeticiones: 12-15 </p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="GEMELOS EN ESCALERA.gif" alt="Superman">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio59" onchange="marcarEjercicio('ejercicio59')">
+              <label for="ejercicio59"></label>
+          </div>
+      </div>
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>Patada de gluteos o gluteos en polea </h3>
+                <p>Series: 4 </p>
+                <p>Repeticiones:12-15 </p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="patada de gluteos mujer.gif" alt="Superman">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio60" onchange="marcarEjercicio('ejercicio60')">
+              <label for="ejercicio60"></label>
+          </div>
+      </div>
+      <div class="ejercicio">
+          <div class="detalle-ejercicio">
+              <h3>cuadricpes</h3>
+                <p>Series: 4 </p>
+                <p>Repeticiones:12-15</p>
+                <p>Descanso : 30 - 45 segundos</p>
+            </div>
+          <div class="imagen-ejercicio">
+              <img src="cuadricpes.gif" alt="Superman">
+          </div>
+          <div class="marcado-ejercicio">
+              <input type="checkbox" id="ejercicio61" onchange="marcarEjercicio('ejercicio61')">
+              <label for="ejercicio61"></label>
+          </div>
+      </div>
+          </div>
+    
+
+<div id="tabla-activacion" class="tabla-rutina">
+  <h2>Activación</h2>
+  <div id="temporizador">
+    <h2>Temporizador de Planchas</h2>
+    <p id="tiempo-restante">1:00</p>
+    
+    <button id="boton-temporizador" onclick="iniciarTemporizador()">Iniciar</button>
+</div>
+
+  <div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>Planchas frontales</h3>
+          <p>Series: 4</p>
+          <p>Repeticiones:  60 segundos</p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="planchas frontales.jpg" alt="Plancha">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio11" onchange="marcarEjercicio('ejercicio11')">
+        <label for="ejercicio11"></label>
+    </div>
+</div>
+
+
+<div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>Planchas laterales</h3>
+          <p>Series: 4 (2 por lado)</p>
+          <p>Repeticiones: 60 segundos</p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="plancha lateral.png" alt="Plancha">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio12" onchange="marcarEjercicio('ejercicio12')">
+        <label for="ejercicio12"></label>
+    </div>
+</div>
+
+<div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>Abdominales Cortos</h3>
+          <p>Series: 4 </p>
+          <p>Repeticiones: 30 - 45 </p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="cortos.gif" alt="Plancha">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio39" onchange="marcarEjercicio('ejercicio39')">
+        <label for="ejercicio39"></label>
+    </div>
+</div>
+
+<div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>escaladores</h3>
+          <p>Series: 4 </p>
+          <p>Repeticiones: 30 - 40 </p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="escaladores.gif" alt="Plancha">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio41" onchange="marcarEjercicio('ejercicio41')">
+        <label for="ejercicio41"></label>
+    </div>
+</div>
+
+
+<div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>Abd cruzados</h3>
+          <p>Series: 4 </p>
+          <p>Repeticiones: 12-15 por lado</p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="cruzados.gif" alt="Superman">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio13" onchange="marcarEjercicio('ejercicio13')">
+        <label for="ejercicio13"></label>
+    </div>
+</div>
+<div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>Abdominales con giro ruso</h3>
+          <p>Series: 4 </p>
+          <p>Repeticiones: 12-15 por lado</p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="abdominales con giro.gif" alt="Superman">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio14" onchange="marcarEjercicio('ejercicio14')">
+        <label for="ejercicio14"></label>
+    </div>
+</div>
+<div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>Postura</h3>
+          <p>Series: 4 </p>
+          <p>Repeticiones:60 segundos</p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="POSTURA MUJER.jpg" alt="Superman">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio15" onchange="marcarEjercicio('ejercicio15')">
+        <label for="ejercicio15"></label>
+    </div>
+</div>
+<div class="ejercicio">
+    <div class="detalle-ejercicio">
+        <h3>Espinales</h3>
+          <p>Series: 4 </p>
+          <p>Repeticiones:60 segundos</p>
+          <p>Descanso : 30 - 45 segundos</p>
+      </div>
+    <div class="imagen-ejercicio">
+        <img src="espinales alternados.gif" alt="Superman">
+    </div>
+    <div class="marcado-ejercicio">
+        <input type="checkbox" id="ejercicio16" onchange="marcarEjercicio('ejercicio16')">
+        <label for="ejercicio16"></label>
+    </div>
+</div>
+    </div>
+
+    
+<div id="info-personal" class="info-personal tabla-rutina">
+  <h2>Mi Información</h2>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Nombre:</strong></div>
+      <div class="info-dato">Yani </div>
+  </div>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Apellido:</strong></div>
+      <div class="info-dato">Weyreuter </div>
+  </div>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Peso:</strong></div>
+      <div class="info-dato">69,200 kg</div>
+  </div>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Altura:</strong></div>
+      <div class="info-dato">164cm</div>
+  </div>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Edad:</strong></div>
+      <div class="info-dato">30 años</div>
+  </div>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Objetivo:</strong></div>
+      <div class="info-dato">bajar de peso , tonificar</div>
+  </div>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Lesiones:</strong></div>
+      <div class="info-dato">no 
+        </div>
+  </div>
+  <div class="detalle-info">
+      <div class="info-titulo"><strong>Enfermedades:</strong></div>
+      <div class="info-dato">Hipotiroidismo.</div>
+  </div>
+
+  <div class="detalle-info">
+    <div class="info-titulo"><strong>actividad semanal :</strong></div>
+    <div class="info-dato"> 3 a 4 veces</div>
+</div>
+</div>
+
+
+<div id="recomendacion" class="recomendacion tabla-rutina">
+    <h2>Recomendaciones para el gimnasio</h2>
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>1. Activación antes del entrenamiento:</strong></div>
+        <div class="info-dato">Realiza por lo menos 3 ejercicios de la Activación para preparar tu cuerpo para el ejercicio.</div>
+    </div>
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>2. Desconocimiento del ejercicio:</strong></div>
+        <div class="info-dato">No dudes en consultar con tu profesor o solicitar una variante de ejercicio.</div>
+    </div>
+    
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>3. Hidratación durante el entrenamiento:</strong></div>
+        <div class="info-dato">Beber agua antes, durante y después del entrenamiento para mantenerte hidratada.</div>
+    </div>
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>4. técnica correcta en los ejercicios:</strong></div>
+        <div class="info-dato">Asegúrate de mantener una buena técnica en todos tus ejercicios para evitar lesiones.</div>
+    </div>
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>5. Descanso entre series:</strong></div>
+        <div class="info-dato">Descansa al menos 1 minuto entre cada serie para permitir que tus músculos se recuperen.</div>
+    </div>
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>6. Control de Peso:</strong></div>
+        <div class="info-dato">Recordá siempre Realizar un ejercicio donde puedas levantar un peso que lo controles sin perder la tecnica.</div>
+    </div>
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>7. Control de la intensidad:</strong></div>
+        <div class="info-dato">Recordá ajustar la intensidad de tus entrenamientos según tu nivel de condición física y tus objetivos. Escucha a tu cuerpo y hace modificaciones según sea necesario.</div>
+    </div>
+    
+    <div class="detalle-info Recomendaciones">
+        <div class="info-titulo"><strong>8. Estiramiento después del entrenamiento:</strong></div>
+        <div class="info-dato">Realiza estiramientos para ayudar a tu cuerpo a recuperarse después del entrenamiento.</div>
+    </div>
+</div>
+
+
+
+<!-- Agrega este elemento al final del body -->
+<div id="alertaentreejercicio" style="display: none;" class="alertaentreejercicio">
+    <div class="contenido-alerta">
+        <span onclick="cerrarAlerta()" class="cerrar">&times;</span>
+        <p>¡Atención Yani! ya pasaron más de 10 minutos sin marcar el siguiente ejercicio.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
